@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#queastionsBar{
+    position: fixed;
+    top: 100px;
+    z-index: 999999999999999999999999999999;
+}
+.bctctexts{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+:root{
+    --boxWidth: 50px;
+    --boxHeight: 50px;
+    --boxInps: 40px;
+    --boxBcolor: rgb(240, 240, 240);
+}
+body {
+    font-family: 'Arial', "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-width: 363px;
+}
+#topbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1C394A;
+    position: fixed;
+    padding: 2px;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 9999999999999999999;
+    min-width: 300px;
+}
+#squareControlBox, #showDowBox, .colorControlBox{
+    display: flex;
+}
+#squareControlBox{
+    overflow-x: auto;
+    overflow-y: auto;
+}
+ion-icon{
+    font-size: 15px;
+    background-color: #629FFF;
+    border-radius: 5px;
+    margin: 1px 3px;
+    padding: 7px;
+    cursor: pointer;
+}
+#showcanvasBtn{
+    color: #000;
+    background-color: #629FFF;
+}
+#weblogoDiv{
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    align-items: center;
+}
+
+.siteName{
+    font-family: 'Hind Madurai', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Signika', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+#weblogo{
+    width: 40px;
+    margin-right: 5px;
+}
+
+ion-icon:hover, #showcanvasBtn:hover{
+    background-color: #7eaffc;
+}
+.colorControlBoxRes{
+    display: block;
+    position: absolute;
+    background: #1b384990;
+    top: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur();
+    transition: all 3s;
+    z-index: 99999999999999999999;
+}
+#colorBigBox{
+    background-color: #fff;
+    padding: 0px 2px 2px 2px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 200px;
+    min-width: 150px;
+}
+.colorBox{
+    display: flex;
+    padding-top: 6px;
+    justify-content: center;
+}
+.backcolors, .bordercolors, .textcolors{
+    width: 17px;
+    height: 17px;
+    margin: 2px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+#whiteBackColor, #whiteBorderColor, #whiteTextColor{
+    background-color: #fff;
+    border: 1px solid #000;
+}
+#blackBackColor, #blackBorderColor, #blackTextColor{
+    background-color: #000;
+}
+#greenBackColor, #greenBorderColor, #greenTextColor{
+    background-color: #00F227;
+}
+#blueBackColor, #blueBorderColor, #blueTextColor{
+    background-color: #629FFF;
+}
+#orangeBorderColor, #orangeBackColor, #orangeTextColor{
+    background-color: #FFA800;
+}
+#redBackColor, #redBorderColor, #redTextColor{
+    background-color: #FF0000;
+}
+
+.color-input-container input[type="color"] {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+#colorBtn{
+    color: #000;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 50%;
+    font-size: 19px;
+    padding: 5px;
+    margin: 2px;
+    display: none;
+}
+#colorBtn:hover{
+    color: #fff;
+}
+.btnColorActive{
+    margin-top: -2px;
+    transition: all 0.02s;
+    width: 22px;
+    height: 22px;
+}
+.btnActive{
+    color: #fff;
+    transition: all 0.3s;
+}
+#dowBtn:hover{
+    background-color: #5dfa77;
+}
+#showDowBox{
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+}
+#backBtn{
+    border: none;
+    background-color: #00000045;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    display: none;
+    font-size: 24px;
+}
+/*----------------------------------------------------------------*/
+.clickAnimation{
+    background-color: black;
+    z-index: 99999;
+}
+#downbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    position: relative;
+}
+#mainBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+@media screen and (max-width: 950px) {
+    #topbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #colorControlBox{
+        display: none;
+        transition: all .5s;
+    }
+    #colorBtn{
+        display: block;
+        transition: all .5s;
+
+    }
+    #weblogo{
+        width: 35px;
+        transition: all .5s;
+
+    }
+}
+@media screen and (max-width: 570px) {
+    #siteName{
+        display: none;
+    }
+    #weblogoDiv{
+        left: 4px;
+        transition: all .5s;
+    }
+}
+
+@media screen and (max-width: 395px) {
+
+    #weblogoDiv{
+        width: 10px;
+        display: none;
+    }
+}
+@media screen and (max-width: 316px) {
+
+    #roundBigBox{
+        display: none;
+    }
+    #footercontent{
+        margin: 10px;
+    }
+}
+.boxes{
+    width: var(--boxWidth);
+    height: var(--boxHeight);
+    outline: none;
+    margin: -1.5px;
+    border: 3px solid var(--boxBcolor);
+    text-align: center;
+    font-size: 30px;
+    z-index: 0;
+    user-select: none;
+    position: relative;
+    line-height: 1.4;
+    cursor: pointer;
+}
+#label1{
+    color: #fff;
+    margin-left: 5px;
+}
+
+#roundNum{
+    margin-left: 5px;
+    outline: none;
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+#mainBoxContainer{
+    border-radius: 10px;
+    padding: 7px;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: relative;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+#showResDiv{
+    border: 1px solid black;
+    position: absolute;
+    background-color: transparent; /*9 lesse than top box*/
+}
+
+
+#screenoff {
+    position: absolute;
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+}
+.qualityInput{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}
+#showDowBox label{
+    color: #fff;
+}
+
+#xmaker{
+    position: absolute;
+    left: -99999999999px;
+    user-select: none;
+}
+
+#addQuesShowBtn{
+    padding: 0;
+}
+
+#addQuesTxt{
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+    resize: none;
+    margin: 0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+#finalQuesAddToPage{
+    resize: none;
+    padding: 5px 5px 5px 5px;
+    z-index: -1;
+    opacity: 0;
+    border: none;
+    font-size: 20px;
+    
+}
+#addQuesTxt:focus {
+    outline: 0px solid #000;
+}
+#showBtn{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+h20{
+    padding: 0 15px;
+    font-size: 12px
+}
+
+#finalQuesAddToPage{
+    position: absolute;
+    word-wrap: break-word;
+}
